@@ -10,3 +10,6 @@ You will convert a C# program that evaluates mathematical expressions using a st
 
 ### MASM Implementation Notes
 - Implement a stack in memory, managing pushes and pops with stack pointer manipulations. - Parse the postfix expression and execute operations based on stack state.
+
+#### Team Members
+Tim Price
