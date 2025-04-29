@@ -40,3 +40,4 @@
 /home/timprice/repos/final-assembly/postfix-evaluation-cs/obj/Debug/net9.0/postfix-evaluation.pdb
 /home/timprice/repos/final-assembly/postfix-evaluation-cs/obj/Debug/net9.0/postfix-evaluation.genruntimeconfig.cache
 /home/timprice/repos/final-assembly/postfix-evaluation-cs/obj/Debug/net9.0/ref/postfix-evaluation.dll
+/home/timprice/repos/final-assembly/postfix-evaluation-cs/obj/Debug/net9.0/postfix-evaluation.sourcelink.json
