@@ -1,7 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics; 
 
 class PostfixEvaluation {
+
+    public static Stopwatch timer = new Stopwatch();
+
     static int EvaluatePostfix(string expression) {
         Stack<int> stack = new Stack<int>();
         foreach (char c in expression) {
@@ -30,9 +34,33 @@ class PostfixEvaluation {
         }
         return stack.Pop();
     }
+    
     static void Main(){
-        /*string expression = "231*+9 - ";*/
-        string expression = "63*";
-        Console.WriteLine("Postfix Evaluation : " + EvaluatePostfix(expression));
+        string expression = "231*+9-";
+        int finalEvaluation = EvaluatePostfix(expression);
+
+        /*
+         *      Calculate Latency
+         */
+
+        timer.Restart();
+        EvaluatePostfix(expression);
+        timer.Stop();
+        decimal latency = (decimal)timer.Elapsed.TotalMilliseconds;
+        
+        /*
+         *      Calculate Latency
+         */
+
+        int iterations = 10000;
+        timer.Restart();
+        for (int i = 0; i < iterations; i++) {
+            EvaluatePostfix(expression);
+        }
+        decimal throughput = (decimal)timer.Elapsed.TotalMilliseconds;
+
+        Console.WriteLine("Postfix Evaluation : " + finalEvaluation);
+        Console.WriteLine("Latency: " + latency + " ms");
+        Console.WriteLine("Troughput: " + throughput + " ms");
     }
 }
