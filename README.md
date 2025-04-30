@@ -1,6 +1,8 @@
 ## Assignment Details
 ## Project 6: Stack-Based Expression Evaluation
 
+A detailed writeup can be found [here↗](github.com/timmprice)
+
 You will convert a C# program that evaluates mathematical expressions using a stack (postfix notation) into MASM assembly code. This project includes implementing stack operations and parsing strings
 
 ### Instructions
