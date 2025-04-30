@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-
-/* */
 class PostfixEvaluation {
     static int EvaluatePostfix(string expression) {
         Stack<int> stack = new Stack<int>();
@@ -33,7 +31,8 @@ class PostfixEvaluation {
         return stack.Pop();
     }
     static void Main(){
-        string expression = "231*+9 - ";
+        /*string expression = "231*+9 - ";*/
+        string expression = "63*";
         Console.WriteLine("Postfix Evaluation : " + EvaluatePostfix(expression));
     }
 }

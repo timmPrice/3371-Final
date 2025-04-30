@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("postfix-evaluation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9adb4201a9262cb37d8a96cdbc31652f81fd3e70")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+604d5d020b7aa0f19acfe1605b6884f250ed711c")]
 [assembly: System.Reflection.AssemblyProductAttribute("postfix-evaluation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("postfix-evaluation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
