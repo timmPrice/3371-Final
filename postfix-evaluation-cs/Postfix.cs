@@ -49,7 +49,7 @@ class PostfixEvaluation {
         decimal latency = (decimal)timer.Elapsed.TotalMilliseconds;
         
         /*
-         *      Calculate Latency
+         *      Calculate Throughput 
          */
 
         int iterations = 10000;
