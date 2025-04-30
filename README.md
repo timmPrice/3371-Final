@@ -15,6 +15,7 @@ You will convert a C# program that evaluates mathematical expressions using a st
 -  The easiest way to run the c# source code is to use the dotnet cli
 -  execute `dotnet run` in the directory with the cs file
 -  The easiest way to run the asm source code is to setup visual studio 2022 in a windows enviornment (I use a virtual machine since my laptop runs linux)
+    - see https://programminghaven.home.blog/2020/02/16/setup-an-assembly-project-on-visual-studio-2019/ for detailed setup instructions
 -  set breakpoints at points of interest and step through the code using the built in debugger in the env. 
 
 #### Team Members
