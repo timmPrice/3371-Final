@@ -6,8 +6,7 @@ ExitProcess PROTO, dwExitCode:DWORD
 INCLUDE kernel32.inc
 
 .data
-    ; expression BYTE "231*+9-", 0
-    expression BYTE "92*", 0
+    expression BYTE "231*+9-", 0
     the_stack DWORD 25 dup(?)
     result DWORD 0
     stack_point DWORD 0
