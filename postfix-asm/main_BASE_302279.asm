@@ -6,32 +6,25 @@ ExitProcess PROTO, dwExitCode:DWORD
 INCLUDE kernel32.inc
 
 .data
-<<<<<<< HEAD
-     expression BYTE "231*+9-", 0       ; expression to-be evaluated
-    the_stack DWORD 25 dup(?)           ; memory for stack implementation
-    result DWORD 0                      ; result
-    stack_point DWORD 0                 ; stack-pointer for stack impl.
-=======
-    expression BYTE "231*+9-", 0
+    ; expression BYTE "231*+9-", 0
+    expression BYTE "92*", 0
     the_stack DWORD 25 dup(?)
     result DWORD 0
     stack_point DWORD 0
->>>>>>> refs/remotes/origin/master
 
 .code
     main PROC
-        mov esi, offset expression      ; points to the first char
+        mov esi, offset expression
 
     READ_STRING:
-        movzx eax, byte ptr [esi]       ; mov first char into eax
-        cmp al, 0                       ; if char is 0 (null terminator)
-        je END_LOOP                     ;      \ it was the last char
+        movzx eax, byte ptr [esi]
+        cmp al, 0 
+        je END_LOOP
 
-        cmp al, '0'                     ; if al < 0
-        jl HANDLE_OPERATOR              ;      \ al is not a digit
-        cmp al, '9'                     ; if al > 9
-        jg HANDLE_OPERATOR              ;      \ al is not a digit
-
+        cmp al, '0'
+        jl HANDLE_OPERATOR
+        cmp al, '9'
+        jg HANDLE_OPERATOR
 
         sub al, '0'
         movzx eax, al

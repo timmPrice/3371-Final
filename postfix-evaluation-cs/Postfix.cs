@@ -36,7 +36,7 @@ class PostfixEvaluation {
     }
     
     static void Main(){
-        string expression = "231*+9-";
+        string expression = "63*";
         int finalEvaluation = EvaluatePostfix(expression);
 
         /*
@@ -52,15 +52,15 @@ class PostfixEvaluation {
          *      Calculate Throughput 
          */
 
-        int iterations = 10000;
+        int iterations = 100000;
         timer.Restart();
         for (int i = 0; i < iterations; i++) {
             EvaluatePostfix(expression);
         }
-        decimal throughput = (decimal)timer.Elapsed.TotalMilliseconds;
+        decimal throughput = iterations / (decimal)timer.Elapsed.TotalSeconds;
 
         Console.WriteLine("Postfix Evaluation : " + finalEvaluation);
-        Console.WriteLine("Latency: " + latency + " ms");
-        Console.WriteLine("Troughput: " + throughput + " ms");
+        Console.WriteLine("Latency: " + latency + " ms per operation");
+        Console.WriteLine($"Throughput: {throughput:F2} ops/sec");
     }
 }

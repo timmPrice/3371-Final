@@ -6,17 +6,10 @@ ExitProcess PROTO, dwExitCode:DWORD
 INCLUDE kernel32.inc
 
 .data
-<<<<<<< HEAD
      expression BYTE "231*+9-", 0       ; expression to-be evaluated
     the_stack DWORD 25 dup(?)           ; memory for stack implementation
     result DWORD 0                      ; result
     stack_point DWORD 0                 ; stack-pointer for stack impl.
-=======
-    expression BYTE "231*+9-", 0
-    the_stack DWORD 25 dup(?)
-    result DWORD 0
-    stack_point DWORD 0
->>>>>>> refs/remotes/origin/master
 
 .code
     main PROC
