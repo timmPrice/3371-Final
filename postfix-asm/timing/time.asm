@@ -3,17 +3,17 @@
 .stack 4096
 
 ExitProcess PROTO, dwExitCode:DWORD
-INCLUDE kernel32.inc
 
 .data
      expression BYTE "231*+9-", 0       ; expression to-be evaluated
     the_stack DWORD 25 dup(?)           ; memory for stack implementation
     result DWORD 0                      ; result
     stack_point DWORD 0                 ; stack-pointer for stack impl.
+    loopCounter DWORD 100000
 
 .code
-    main PROC
-        mov esi, offset expression      ; points to the first char
+    loopMain PROC
+        mov esi, offset expression      
 
     READ_STRING:
         movzx eax, byte ptr [esi]       ; mov first char into eax
@@ -78,7 +78,15 @@ INCLUDE kernel32.inc
         mov eax, [the_stack + ecx*4]
         mov result, eax
         
-        INVOKE ExitProcess, 0
+    loopMain ENDP
+
+    main PROC
+        mov ecx, loopCounter      ; Set loop count to 100,000
+        LOOP_START:
+                CALL loopMain
+                dec ecx
+                jnz LOOP_START            
+                INVOKE ExitProcess, 0
     main ENDP
 
-END main
+    END main 
