@@ -1,4 +1,4 @@
-$exePath = ".\loop.exe"
+$exePath = ".\time.exe"
 $sw = [System.Diagnostics.Stopwatch]::StartNew()
 & $exePath
 $sw.Stop()
